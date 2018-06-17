@@ -16,7 +16,7 @@
   + add front page route //twitterX.com
   + logged in user route the same but different JSP
   + Add Tomcat server, run project
-  - Add login mechanism
+  + Add login mechanism
   - Add bootstrap to project
   - Build GUI for login page
   - Build GUI for logged in page

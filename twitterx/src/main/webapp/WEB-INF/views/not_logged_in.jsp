@@ -7,6 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<p>eheheheheheheheheheh</p>
+	<form action="/" method="post">
+		<input type="text" name="login">
+		<input type="password" name="password">
+		<input type="submit">
+	</form>
+	<p>You are not logged in! Unlucky!</p>
 </body>
 </html>

@@ -14,11 +14,28 @@ public class MainServlet extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException,IOException {
-		request.getRequestDispatcher("/WEB-INF/views/not_logged_in.jsp").forward(request, response);;
+		request.getRequestDispatcher("/WEB-INF/views/not_logged_in.jsp").forward(request, response);
 	}
 	
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		String login = request.getParameter("login");
+		String password = request.getParameter("password");
+		if(userExists(login, password)) {
+			request.getRequestDispatcher("/WEB-INF/views/logged_in.jsp").forward(request, response);
+		} else {
+			request.getRequestDispatcher("/WEB-INF/views/not_logged_in.jsp").forward(request, response);
+		}
+		
 	}
+	
+	private boolean userExists(String login, String password) {
+		
+		if(login.equals("example") && password.equals("example")) {
+			return true;
+		}
+		return false;
+		
+	}
+	
 }
